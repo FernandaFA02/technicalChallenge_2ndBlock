@@ -1,0 +1,26 @@
+{
+  "name": "technicalchallenge",
+  "version": "1.0.0",
+  "description": "reto tecnico, notes app, resolutios",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FernandaFA02/technicalChallenge_2ndBlock.git"
+  },
+  "keywords": [
+    "technical",
+    "challenge"
+  ],
+  "author": "Fernanda Fajardo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FernandaFA02/technicalChallenge_2ndBlock/issues"
+  },
+  "homepage": "https://github.com/FernandaFA02/technicalChallenge_2ndBlock#readme",
+  "devDependencies": {
+    "eslint": "^8.6.0"
+  }
+}
