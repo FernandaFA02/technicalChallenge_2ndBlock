@@ -23,22 +23,18 @@ main{
 
 header{
     grid-area: header;
-    border: dotted;
 }
 
 aside{
     grid-area: aside;
-    border: dotted;
 }
 
 section{
     grid-area: section;
-    border: dotted;
 }
 
 footer{
     grid-area: footer;
-    border: dotted;
     font-family:  'Permanent Marker', cursive;
     text-align: center;
 }
@@ -117,6 +113,7 @@ h1{
     border: none;
     outline: none;
     width: 100%;
+    text-align: center;
 }
 
 .notes-title{
@@ -130,4 +127,10 @@ h1{
     line-height: 1,5;
     margin-top: 2em;
     resize: none;
+}
+
+.blockquote,
+.blockquote-footer{
+    font-family: 'Satisfy', cursive;
+    text-align: right;
 }
