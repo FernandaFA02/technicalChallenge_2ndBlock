@@ -37,11 +37,13 @@ footer{
     grid-area: footer;
     font-family:  'Permanent Marker', cursive;
     text-align: center;
+    text-shadow: 2px 2px 4px #6c16cfcb;
 }
 
 h1{
     font-family: 'Permanent Marker', cursive;
     text-align: center;
+    text-shadow: 2px 2px 4px #f1238acb;
 }
 
 .notes{
@@ -70,6 +72,7 @@ h1{
     margin-bottom: 1em;
     padding: 0.75em 0;
     width: 100%;
+    text-shadow: 2px 2px 4px #fc466b;
 }
 
 .notes-add :hover{
@@ -78,6 +81,7 @@ h1{
 
 .note-list-items{
     cursor: pointer;
+    background: #fc466b;
     border-radius: 7px;
     font-weight: lighter;
 }
@@ -133,4 +137,10 @@ h1{
 .blockquote-footer{
     font-family: 'Satisfy', cursive;
     text-align: right;
+    text-shadow: 2px 2px 4px #6c16cfcb;
+}
+
+.temas{
+    text-align: center;
+    text-shadow: 2px 2px 4px lawngreen;
 }

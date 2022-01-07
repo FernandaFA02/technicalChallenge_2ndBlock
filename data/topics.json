@@ -1,0 +1,22 @@
+{
+    "ResolutionTopics": [ 
+        {
+        "topic": "Personal"
+        },
+            {
+                "topic": "Professional"
+            },
+                {
+                    "topic": "Relationships"
+                },
+                    {
+                        "topic": "Family"
+                    },
+                        {
+                            "topic": "Health"
+                        },
+                            {
+                                "topic": "Learning"
+                            }
+    ]
+}
