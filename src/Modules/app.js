@@ -7,3 +7,4 @@ db.collection('Notas').onSnapshot((data) => {
   })
 
 console.log(db);
+

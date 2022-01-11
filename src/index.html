@@ -27,8 +27,11 @@
             <div class="notes" id="app">
                 <div class="notes-sidebar">
                     <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                        <label for="Temas" class="temas">Selecciona el tema de tu nota</label>
                         <select id="temas" class="btn btn-lg btn-danger"></select>
+                      </div>
+                      <br>
+                      <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                        <select id="mes" class="btn btn-success"></select>
                       </div>
                       <br> <br>
                     <button type="button" class="btn btn-lg btn-primary notes-add" id="btn-agregar">Agregar Nota</button>
@@ -44,9 +47,9 @@
                 </div>
                 <br>
                 <div class="notes-preview">
-                    <input class="form-control form-control-sm notes-title" type="text" placeholder="Titulo" id="titulo" value="titulo">
+                    <input class="form-control form-control-sm notes-title" type="text" placeholder="Propósito" id="titulo" >
                     <br>
-                    <textarea class="form-control notes-body" id="descripcion" rows="3" value="descripcion"></textarea>
+                    <textarea class=" notes-body" id="descripcion" rows="3" placeholder="Descripción"></textarea>
                 </div>
             </div>
             </aside>
@@ -58,7 +61,7 @@
                         They will hold on to you,
                         And I will hold on to you.</p>
                     </blockquote>
-                    <figcaption class="blockquote-footer">
+                    <figcaption class="blockquote-footer" id="b-f">
                         Taylor Swift <cite title="Source Title">New Year's Day</cite>
                     </figcaption>
                 </figure>

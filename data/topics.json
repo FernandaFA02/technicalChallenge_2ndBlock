@@ -1,22 +1,28 @@
 {
     "ResolutionTopics": [ 
         {
-        "topic": "Personal"
+        "topic": "Personal",
+        "bimestre": "Ene-Feb"
         },
             {
-                "topic": "Professional"
+                "topic": "Professional",
+                "bimestre": "Mar-Abr"
             },
                 {
-                    "topic": "Relationships"
+                    "topic": "Relationships",
+                    "bimestre": "May-Jun"
                 },
                     {
-                        "topic": "Family"
+                        "topic": "Family",
+                        "bimestre": "Jul-Agos"
                     },
                         {
-                            "topic": "Health"
+                            "topic": "Health",
+                            "bimestre": "Sep-Oct"
                         },
                             {
-                                "topic": "Learning"
+                                "topic": "Learning",
+                                "bimestre": "Nov-Dic"
                             }
     ]
 }
