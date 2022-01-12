@@ -3,7 +3,7 @@ import { db } from "./firebase.js"
 import {  collection, getDocs, addDoc } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js';
 
 //----------------------------------- Comprobando conección para crear colecciones ----------------------------------//
-// console.log(db);
+ console.log(db);
 
 //-----------------------------Se crea funcion para agregar los datos del objeto dentro de la colección -------------//
 const guardarNota = async (titulo, nota, tema, mes) => {
@@ -12,6 +12,9 @@ const guardarNota = async (titulo, nota, tema, mes) => {
             titulo, nota,tema,mes, fecha: new Date (),
         });
         console.log("Document written with ID: ", docRef.id);
+            alert('Tu nota a sido guardada exitosamente!')
+            document.getElementById('titulo').value = "";
+            document.getElementById('descripcion').value = "";
     }catch (e) {
         console.error("Error adding document: ", e);
     }

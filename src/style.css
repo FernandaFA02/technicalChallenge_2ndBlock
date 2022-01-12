@@ -148,6 +148,18 @@ h1{
     color: black;
 }
 
+.delete{
+    color: black;
+    font-family: 'Satisfy', cursive;
+    text-shadow: 2px 2px 4px #6c16cfcb;
+}
+
+#delete{
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+}
+
 #b-f{
     font-family: 'Satisfy', cursive;
     text-align: right;

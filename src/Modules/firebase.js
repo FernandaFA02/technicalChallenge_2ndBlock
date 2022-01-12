@@ -1,6 +1,6 @@
 // ------------------------ Se agrega el SDK del proyecto en firebase ----------------------------------------------//
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js';
-import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+import { getFirestore, collection, getDocs, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCtDQ3_boIltWqKVUrVi7CHZffVPpyTWhI",
@@ -32,4 +32,16 @@ getDocs(colRef)
   })
   .catch(err => {
     console.log(err.messege);
+  })
+
+  // Deleting documents
+  const borrarNota = document.querySelector('.delete')
+  borrarNota.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const docRef = doc(db, 'Notas', borrarNota.id.value)
+
+    deleteDoc(docRef)
+    .then(() => {
+      borrarNota.reset(); 
+    })
   })
