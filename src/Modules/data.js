@@ -3,7 +3,7 @@ import { db } from "./firebase.js"
 import {  collection, getDocs, addDoc } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js';
 
 //----------------------------------- Comprobando conección para crear colecciones ----------------------------------//
-console.log(db);
+// console.log(db);
 
 //-----------------------------Se crea funcion para agregar los datos del objeto dentro de la colección -------------//
 const guardarNota = async (titulo, nota, tema, mes) => {
@@ -32,10 +32,9 @@ agregarNotas.addEventListener('click', async (e) => {
         await guardarNota(titulo, nota, tema, mes);
 });
 
-
 //--------------------------------------------------------- Se atrae la data del JSON -------------------------------//
 const traerData = "../data/topics.json";
-console.log(traerData); //Se comprueba que funcione
+// console.log(traerData); //Se comprueba que funcione
 
 // ---------------------------Se crea un arreglo vacio para vaciar la data -------------------------------------------//
 let arrayTopics = [];
@@ -58,7 +57,7 @@ export const fetchData = () => {
 // ------------------------- Se hace la iteración de los datos para pintar dinámicamente ------------------------------//
 const iterarTopics = (arrayTopics) => {
     for (const [index, tema] of arrayTopics.entries()) {
-        console.log(index, tema);
+        // console.log(index, tema);
         let temas = document.getElementById('temas')
         temas.innerHTML += `
                         <option>${tema.topic}</option><br>`
@@ -68,10 +67,9 @@ const iterarTopics = (arrayTopics) => {
 // ------------------------- Se hace la iteración de los datos del bimestre para pintar dinámicamente ------//
 const iterarBimestre = (arrayBimestre) => {
     for (const [index, mes] of arrayBimestre.entries()) {
-        console.log(index, mes);
+        // console.log(index, mes);
         let bimestre = document.getElementById('mes')
         bimestre.innerHTML += `
                             <br><option>${mes.bimestre}</option>`
     }
 }
-
