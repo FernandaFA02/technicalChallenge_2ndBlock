@@ -76,3 +76,10 @@ const iterarBimestre = (arrayBimestre) => {
                             <br><option>${mes.bimestre}</option>`
     }
 }
+
+// -------------------- Se activa el btn para cambiar al html donde se muestran las notas en cards -----------//
+const cambiarPantalla = document.getElementById('btn-next')
+cambiarPantalla.addEventListener('click', () => {
+    window.location.href = "../src/notas.html"
+})
+

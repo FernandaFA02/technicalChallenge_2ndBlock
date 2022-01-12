@@ -1,0 +1,45 @@
+/* Agregamos las ligas para las fuentes que se utilizarán*/
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Comfortaa&family=Permanent+Marker&family=Rock+Salt&family=Satisfy&display=swap');
+
+body{
+    background-image: url(../assets/fondo1.jpg);
+    background-size: cover;
+    height: 100%;
+    margin: 0;
+    font-family: 'Permanent Marker', cursive;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 0.5fr 5fr 0.5fr;
+    grid-template-areas: 
+    "header header header "
+    "section section section "
+    "aside aside aside";
+    gap: 10px;
+    padding: 3%;
+    width: auto;
+}
+
+header{
+    grid-area: header;
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+    text-shadow: 2px 2px 4px #f1238acb;
+}
+
+section{
+    grid-area: section;
+}
+
+aside{
+    grid-area: aside;
+    font-family: 'Satisfy', cursive;
+}
+
+#table{
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+    color: black;
+}

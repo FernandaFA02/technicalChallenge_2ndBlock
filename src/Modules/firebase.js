@@ -1,6 +1,6 @@
 // ------------------------ Se agrega el SDK del proyecto en firebase ----------------------------------------------//
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js';
-import { getFirestore, collection, getDocs, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+import { getFirestore, collection, onSnapshot, deleteDoc, doc} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCtDQ3_boIltWqKVUrVi7CHZffVPpyTWhI",
@@ -20,18 +20,27 @@ export const db = getFirestore(app);
 // Collection Reference
 const colRef = collection(db, 'Notas')
 
-// Get collection Data
-getDocs(colRef)
-  .then((snapshot) => {
-    // console.log(snapshot.docs);
+// Real Time collection Data
+  onSnapshot(colRef, (snapshot) => {
     let notes = []
     snapshot.docs.forEach((doc) => {
-      notes.push({ ...doc.data(), id: doc.id}) //we used three dots to spread that into the new object
-    })
-    console.log(notes);
+    notes.push({ ...doc.data(), id: doc.id}) //we used three dots to spread that into the new object  
   })
-  .catch(err => {
-    console.log(err.messege);
+    console.log(notes);
+
+    for (const nota of notes) {
+      console.log(nota);
+      table.innerHTML += `
+      <tbody>
+      <tr class="table-light">
+          <th scope="row">${nota.titulo}</th>
+          <td>${nota.tema}</td>
+          <td>${nota.mes}</td>
+          <td>${nota.nota}</td>
+          <td>${nota.id}</td>
+        </tr>
+  </tbody>`
+    }
   })
 
   // Deleting documents
