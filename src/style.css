@@ -2,19 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Permanent+Marker&family=Rock+Salt&family=Satisfy&display=swap');
 
 body {
+    background-image: url(../assets/collage2.jpg);
+    background-size: cover;
+    opacity: 0.9;
     height: 100%;
     margin: 0;
+    font-family: 'Permanent Marker', cursive;
 }
 
 main{
     display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 2fr 1fr 0.3fr ;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 0.3fr 1fr 0.3fr ;
     grid-template-areas:
-    "header header header header"
-    "aside aside aside aside"
-    "section section section section"
-    "footer footer footer footer";
+    "header header header"
+    "aside aside aside"
+    "section section section"
+    "footer footer footer";
     column-gap: 10px;
     row-gap: 10px;
     padding: 3%;
@@ -38,6 +42,7 @@ footer{
     font-family:  'Permanent Marker', cursive;
     text-align: center;
     text-shadow: 2px 2px 4px #6c16cfcb;
+    color: black;
 }
 
 h1{
@@ -115,8 +120,10 @@ h1{
 .notes-title,
 .notes-body{
     border: none;
+    border-radius: 15px;
     outline: none;
     width: 100%;
+    padding: 0.5rem;
     text-align: center;
 }
 
@@ -138,9 +145,28 @@ h1{
     font-family: 'Satisfy', cursive;
     text-align: right;
     text-shadow: 2px 2px 4px #6c16cfcb;
+    color: black;
 }
 
-.temas{
+.delete{
+    color: black;
+    font-family: 'Satisfy', cursive;
+    text-shadow: 2px 2px 4px #6c16cfcb;
+}
+
+#delete{
+    border-radius: 5px;
+    border: none;
     text-align: center;
-    text-shadow: 2px 2px 4px lawngreen;
+}
+
+#b-f{
+    font-family: 'Satisfy', cursive;
+    text-align: right;
+    text-shadow: 2px 2px 4px #6c16cfcb;
+    color: black;
+}
+
+#social{
+    color: black;
 }

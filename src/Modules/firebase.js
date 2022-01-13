@@ -1,10 +1,7 @@
 // ------------------------ Se agrega el SDK del proyecto en firebase ----------------------------------------------//
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js';
-import { getFirestore, collection, getDocs, addDoc } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js';
-// Follow this pattern to import other Firebase services
-// import { } from 'firebase/<service>';
+import { getFirestore, collection, onSnapshot, deleteDoc, doc} from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
 
-// TODO: Replace the following with your app's Firebase project configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCtDQ3_boIltWqKVUrVi7CHZffVPpyTWhI",
   authDomain: "notes-app-396ac.firebaseapp.com",
@@ -14,46 +11,46 @@ const firebaseConfig = {
   appId: "1:10216027877:web:199590094dd254ca28860c"
 };
 
+// Inicializar Firebase
 const app = initializeApp(firebaseConfig);
+
+// Inicializar Firestore
 export const db = getFirestore(app);
 
-// ------------------------------ Se  crea la colección que enviará las notas ---------------------------------------//
-// try {
-//   const docRef = await addDoc(collection(db, "Notas"), {
-//     first: "Ada",
-//     last: "Lovelace",
-//     born: 1815
-//   });
-//   console.log("Document written with ID: ", docRef.id);
-// } catch (e) {
-//   console.error("Error adding document: ", e);
-// }
+// Collection Reference
+const colRef = collection(db, 'Notas')
 
-//  ----------------------- Se activa el btn de agregar notas para ue envie los datos a firebase ------------------//
+// Real Time collection Data
+  onSnapshot(colRef, (snapshot) => {
+    let notes = []
+    snapshot.docs.forEach((doc) => {
+    notes.push({ ...doc.data(), id: doc.id}) //we used three dots to spread that into the new object  
+  })
+    console.log(notes);
 
-const agregarNotas = document.getElementById('btn-agregar');
-agregarNotas.addEventListener('click', async (e) => {
+    for (const nota of notes) {
+      console.log(nota);
+      table.innerHTML += `
+      <tbody>
+      <tr class="table-light">
+          <th scope="row">${nota.titulo}</th>
+          <td>${nota.tema}</td>
+          <td>${nota.mes}</td>
+          <td>${nota.nota}</td>
+          <td>${nota.id}</td>
+        </tr>
+  </tbody>`
+    }
+  })
+
+  // Deleting documents
+  const borrarNota = document.querySelector('.delete')
+  borrarNota.addEventListener('submit', (e) => {
     e.preventDefault();
+    const docRef = doc(db, 'Notas', borrarNota.id.value)
 
-    let notas = {
-        titulo: document.getElementById('titulo').value,
-        nota: document.getElementById('descripcion').value,
-        tema: document.getElementById('temas').value
-    };
-    console.log(notas);
-    await guardarNota(notas);
-    setTimeout(() => {
-        alert('Tú nota ha sido guardada!')
-    }, 1500);
-})
-
-const guardarNota = (notas) => {
-  console.log(notas);
-  db.collection('Notes').doc().set(notas);
-}
-// try {
-//     const guardarNota = await addDoc(collection(db, "Notas").set(notas));
-//     console.log("Document written with ID: ", docRef.id);
-//   } catch (e) {
-//     console.error("Error adding document: ", e);
-//   }
+    deleteDoc(docRef)
+    .then(() => {
+      borrarNota.reset(); 
+    })
+  })
