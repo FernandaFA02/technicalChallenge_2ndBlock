@@ -1,4 +1,4 @@
-# Technical Challenge
+# Technical Challenge:  _New Years Notes_
 
 ---
 Index
@@ -62,6 +62,10 @@ This applications should allow you to enter your goals and objectives with the f
 ## Final Product
 
 ![1.Final](./assets/FP1.png)
+
+![2.Final](./assets/FP2.png)
+
+![3.Final](./assets/FP3.png)
 
 ---
 

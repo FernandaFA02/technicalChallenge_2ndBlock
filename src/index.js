@@ -42,7 +42,7 @@ function setProgress(){
     document.querySelector('.progress').style.width = percentage + '%'; 
 }
 
-//Audio Controls
+//Controles de Audio
 const playPause = document.getElementById('PlayPause'),
     plus10 = document.getElementById('Plus10'),
     back10 = document.getElementById('Back10');
