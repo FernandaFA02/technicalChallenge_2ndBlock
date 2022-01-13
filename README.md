@@ -48,6 +48,7 @@ This applications should allow you to enter your goals and objectives with the f
 ![Flowchart](./assets/NYA.png)
 
 ---
+
 ## SKETCHING OUT
 
 ![1.Sketch](./assets/M1.png)
@@ -59,6 +60,8 @@ This applications should allow you to enter your goals and objectives with the f
 ---
 
 ## Final Product
+
+![1.Final](./assets/FP1.png)
 
 ---
 
