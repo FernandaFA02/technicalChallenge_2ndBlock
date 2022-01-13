@@ -54,3 +54,5 @@ const colRef = collection(db, 'Notas')
       borrarNota.reset(); 
     })
   })
+
+
